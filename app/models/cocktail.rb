@@ -1,3 +1,3 @@
-class Ingredient < ApplicationRecord
+class Cocktail < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 end
