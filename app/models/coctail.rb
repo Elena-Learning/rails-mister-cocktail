@@ -1,0 +1,2 @@
+class Coctail < ApplicationRecord
+end
