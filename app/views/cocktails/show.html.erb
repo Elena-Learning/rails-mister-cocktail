@@ -2,12 +2,12 @@
 
 <h2><%= @cocktail.name %></h2>
 
-<% @cocktail.doses.each do |dose| %>
+<div> <% @cocktail.doses.each do |dose| %>
   <p> <%= dose.ingredient.name %>:
-  <%= dose.description %> </p>
+  <%= dose.description %> </p> </div>
 
-  <%= link_to "Delete dose", dose_path(dose), method: :delete %> </p>
-<% end %>
+ <div> <p><%= link_to "Delete dose", dose_path(dose), method: :delete %>
+<% end %> </p> </div>
 
-<%= link_to "Go to Cocktail list", cocktails_path %>
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail.id) %>
+<div><%= link_to "Go to Cocktail list", cocktails_path %> </div>
+<div> <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail.id) %> </div>
